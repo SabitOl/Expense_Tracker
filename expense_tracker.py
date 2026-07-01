@@ -1,6 +1,5 @@
 import csv
 import re
-import sys
 
 print("Welcome to the Expense tracker!")
 
@@ -22,23 +21,28 @@ while True:
                 actions = csv.DictWriter(file, fieldnames=["amount", "category", "description", "date"])
                 actions.writerow({"amount": amount, "category": category, "description": description, "date": date})
             
-            print("Write 'exit'")
-                  
+            answer = input("Do you want to continue tracking? (yes/no): ").lower()
+
+            if not answer in ["yes", "no"]:
+                print("Invalid input! Please enter 'yes' or 'no'")
+                break
+            if answer == "no":
+                break   
+        break
+                    
     except ValueError:
         print(f"invalid input!")
 
-    def main():
-        total = 0
-        with open("storage.csv", "r") as file:
-            reader = csv.DictReader(file)
-            for amt in reader:
-                amounts = int(amt["amount"])
-                total += amounts
-            print(f"The total sum of money you spent is ${total}")
+def main():
+    total = 0
+    with open("storage.csv", "r") as file:
+        reader = csv.DictReader(file)
+    for amt in reader:
+        amounts = int(amt["amount"])
+        total += amounts
+        print(f"The total sum of money you spent is ${total}")              
 
-
-if __name__ == "__main__":
-    main()
+main()
 
      
 
