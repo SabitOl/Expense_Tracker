@@ -9,3 +9,5 @@ When the inner loops breaks as a result of wrong value entered, the inner loops 
 So, I decided to include "break" at some points. This stops wrong value to be ever written in the csv file.
 
 The while loops are working. But somehow, the file reader is sending an error message. Will definitely fix this next.
+
+I've still being able to fix the error. But will do unfailingly tomorrow.
