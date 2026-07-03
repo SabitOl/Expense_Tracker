@@ -10,4 +10,7 @@ So, I decided to include "break" at some points. This stops wrong value to be ev
 
 The while loops are working. But somehow, the file reader is sending an error message. Will definitely fix this next.
 
-I've still being able to fix the error. But will do unfailingly tomorrow.
+The error is caused by wrong indentation in file read under the only function in the code. This has been fixed now.
+
+The expesne tracker is now complete and working perfectly!
+
